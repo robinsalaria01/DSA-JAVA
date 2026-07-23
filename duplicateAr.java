@@ -1,0 +1,35 @@
+package array;
+
+import java.util.Scanner;
+
+public class duplicateAr {
+    public static void main(String[] args){
+        
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Size of array.");
+        int n = sc.nextInt();
+        
+        int arr[]=new int[n];
+        
+
+        for(int i=0; i<n; i++){
+            System.out.print(i+" Element : ");
+            arr[i]=sc.nextInt();
+        }
+        
+            for(int i = 0; i < arr.length; i++) {
+
+        for(int j = i + 1; j < arr.length; j++) {
+
+            if(arr[i] == arr[j]) {
+                System.out.println("Duplicate Found : " + arr[i]);
+                }   
+
+            }
+
+        }
+        sc.close();
+    }
+    
+}
